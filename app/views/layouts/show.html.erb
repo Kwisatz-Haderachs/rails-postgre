@@ -1,4 +1,18 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Add these line for detecting device width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     <title><%= yield(:title_tag).blank? ? "My Shitty Webpage" : yield(:title_tag) %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<body>
+
 
 <p>
   <strong>Title:</strong>
@@ -25,3 +39,4 @@
   <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
   <a class="card-link" href="#" ></a>
 </div>
+</body>

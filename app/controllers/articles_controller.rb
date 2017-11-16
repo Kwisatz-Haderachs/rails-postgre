@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  layout "show", only: [ :show ]
 
   # GET /articles
   # GET /articles.json
@@ -15,10 +16,12 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @new_title = "Make a new article"
   end
 
   # GET /articles/1/edit
   def edit
+    @edit_title = "Edit this article"
   end
 
   # POST /articles
